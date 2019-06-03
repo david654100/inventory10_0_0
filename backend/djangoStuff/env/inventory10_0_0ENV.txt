@@ -1,0 +1,17 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
+@EXPLICIT
+https://repo.anaconda.com/pkgs/main/win-64/ca-certificates-2019.1.23-0.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/vs2015_runtime-14.15.26706-h3a45250_4.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/vc-14.1-h0510ff6_4.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/openssl-1.1.1c-he774522_1.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/sqlite-3.28.0-he774522_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/python-3.7.3-h8c8aaf0_1.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/certifi-2019.3.9-py37_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/noarch/pytz-2019.1-py_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/wincertstore-0.2-py37_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/django-2.2.1-py37_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/setuptools-41.0.1-py37_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/wheel-0.33.4-py37_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/win-64/pip-19.1.1-py37_0.tar.bz2
