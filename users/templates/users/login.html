@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     {% load static %}
+    {% load widget_tweaks %}
     <meta charset="utf-8">
     <meta charset="utf-8">
     <title>Welcome!</title>
@@ -23,8 +25,14 @@
           <form class="text-center border border-light p-5" method = "post">
             {% csrf_token %}
             <p class="h4 mb-4">Sign in</p>
-            {{ form.as_p }}
-              <!-- <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+              {% if form.errors %}
+                <p>username or password not correct</p>
+              {% endif %}
+
+              {{ form.username|add_class:'form-control mb-4' | attr:"placeholder = Username" }}
+
+              {{ form.password|add_class:'form-control mb-4' | attr:"placeholder = Password" }}
+              <!-- <input type="username" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Username">
               <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password"> -->
               <div class="d-flex justify-content-around">
                   <div>
@@ -45,6 +53,5 @@
         </div>
       </div>
     </div>
-
   </body>
 </html>
