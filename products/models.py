@@ -11,4 +11,4 @@ class product (models.Model):
     company = models.CharField(max_length=30)
     size = models.CharField(max_length=30)
     color = models.CharField(max_length = 30)
-    comments = models.TextField
+    comments = models.TextField(null=True, blank=True, default=None)

@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'widget_tweaks',
     'products.apps.ProductsConfig',
+    'success_login.apps.SuccessLoginConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -124,3 +125,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "staticfiles")]
+LOGIN_REDIRECT_URL = 'success_login'
