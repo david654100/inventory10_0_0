@@ -25,7 +25,7 @@
             {% csrf_token %}
             <p class="h4 mb-4">Sign in</p>
               {% if form.errors %}
-                <p>username or password not correct</p>
+                <p>Pleas enter a correct username or password</p>
               {% endif %}
 
               {{ form.username|add_class:'form-control mb-4' | attr:"placeholder = Username" }}
