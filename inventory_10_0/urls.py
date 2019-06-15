@@ -18,12 +18,15 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from users import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('landing.urls')),
     path('success_login/', include('success_login.urls')),
-    path('register/' , include('users.urls')),
+    path('register/' , user_views.register, name = 'register'),
+    path('database/', include('database.urls')),
+    path('stats/', include('stats.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name = 'login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name = 'logout')
 ]

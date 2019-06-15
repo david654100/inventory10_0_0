@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'products.apps.ProductsConfig',
     'success_login.apps.SuccessLoginConfig',
+    'stats.apps.StatsConfig',
+    'database.apps.DatabaseConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,3 +1,8 @@
+# New Package Please install
+```
+  pip install django-crispy-forms
+```
+
 # TO DO LIST
 ```
 - Registration Page
@@ -26,6 +31,12 @@
 
 # Commit Messages
 ```
+Ying (6/15/19)
+  - Created DB and Stats App
+  -
+
+
+
 Ying (6/14/19 10:32PM)
   - Fully functioning Login and Logout
   - Added Navigation bar to success_login app

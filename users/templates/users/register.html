@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    {% load static %}
+    {% load widget_tweaks %}
     <meta charset="utf-8">
+    <title>Welcome!</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+    <link href="{% static 'users/register/css/register.css' %}" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
     <title></title>
   </head>
   <body>
-    <h1> something should be here</h1>
+    <div class ="animated slideInDown">
+      <div style = "height: 100vh" >
+        <div id ='register'>
+          <form class="border border-light p-5" method = "POST">
+              {% csrf_token %}
+              <p class="h4 mb-4 text-center">Sign up</p>
+              {{form}}
+              <button class="btn btn-info my-6 mb-4 btn-block" type="submit">Sign up</button>
+              <div class="text-center">
+                <p>Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+              </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
   </body>
 </html>
