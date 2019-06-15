@@ -23,8 +23,6 @@
 
 # What is Ying Currently Working on ???
 ```
-- Registration HTML
-- Login HTML template for displaying messages
 - password requirements
 - special character removal from text fields
 - Success login Page
@@ -33,6 +31,10 @@
 
 # Commit Messages
 ```
+Ying (6/15/19)
+  - fixed Registration HTML
+  - fixed Login HTML template for displaying messages
+
 Ying (6/15/19 2:51PM)
   - Created DB and Stats App
   - Fully Functional User Registration  
