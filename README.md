@@ -1,6 +1,5 @@
 # New Package Please install
 ```
-  pip install django-crispy-forms
 ```
 
 # TO DO LIST
@@ -24,18 +23,19 @@
 
 # What is Ying Currently Working on ???
 ```
-- Registration Page
+- Registration HTML
+- Login HTML template for displaying messages
+- password requirements
+- special character removal from text fields
 - Success login Page
 - Profile Page
 ```
 
 # Commit Messages
 ```
-Ying (6/15/19)
+Ying (6/15/19 2:51PM)
   - Created DB and Stats App
-  -
-
-
+  - Fully Functional User Registration  
 
 Ying (6/14/19 10:32PM)
   - Fully functioning Login and Logout
