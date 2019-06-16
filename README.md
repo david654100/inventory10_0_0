@@ -4,7 +4,7 @@
 
 # TO DO LIST
 ```
-- Registration Page
+
 - Success Log in Page
 - Database Page
 - Password reset
@@ -20,9 +20,9 @@
 
 # What is David Currently Working on???
 ```
-- Registration Page
+
 - Database Page
-- 
+- transaction model
 ```
 
 # What is Ying Currently Working on ???
