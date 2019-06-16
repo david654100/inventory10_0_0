@@ -13,6 +13,7 @@
 - Activity Logger
 - Sign in Logger
 - in actives accounts gets automatically signed out after a certain time.
+- finnish transaction model
 ```
 
 
