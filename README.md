@@ -19,6 +19,9 @@
 
 # What is David Currently Working on???
 ```
+- Registration Page
+- Database Page
+- 
 ```
 
 # What is Ying Currently Working on ???
