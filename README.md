@@ -1,5 +1,8 @@
-# New Package Please install
+# New libraries  Please install
 ```
+ conda  django
+
+ pip  django-widget-tweaks
 ```
 
 # TO DO LIST
