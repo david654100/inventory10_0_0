@@ -32,6 +32,9 @@
 
 # Commit Messages
 ```
+Ying (6/16/19 12:05 AM)
+  - fixed html and css for registration page to fit different screen sizes
+
 Ying (6/15/19 6:31 PM)
   - fixed Registration HTML
   - fixed Login HTML template for displaying messages

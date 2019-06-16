@@ -19,8 +19,7 @@
   </head>
   <body>
     <div class ="animated slideInDown">
-      <div style = "height: 100vh" >
-        <div id ='register'>
+        <div class="register">
           <form class="border border-light p-5" method = "POST">
               {% csrf_token %}
               <p class="h4 mb-4 text-center">Sign up</p>
@@ -40,7 +39,7 @@
           </form>
         </div>
 
-      <div id = requirements class="card">
+      <div class="card">
         <div class="card-body">
           <h4 class="card-title">Username Requirments</h4>
           <p class="card-text">

@@ -1,18 +1,17 @@
-#register{
+.register{
+  position: relative;
   background: white;
-  position: absolute;
-  top:50%;
-  left:40%;
-  width: 600px;
-  transform: translate(-50%, -50%);
+  width: 40vw;
+  left: 20vw;
+  top: 10vh;
 }
 
-#requirements{
-  background: white;
+.card{
   position: absolute;
-  top:50%;
-  left: 70%;
-  transform: translate(-50%, -50%)
+  background: white;
+  width: 27vw;
+  left: 62vw;
+  top: 10vh;
 }
 
 body {
