@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'landing.apps.LandingConfig',
     'users.apps.UsersConfig',
     'widget_tweaks',
+  
     'products.apps.ProductsConfig',
     'success_login.apps.SuccessLoginConfig',
     'stats.apps.StatsConfig',

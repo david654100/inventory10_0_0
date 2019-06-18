@@ -1,6 +1,6 @@
 # New libraries  Please install
 ```
- conda  django
+ conda  django, sqlparse 
 
  pip  django-widget-tweaks
 ```
