@@ -1,8 +1,11 @@
 # New libraries  Please install
 ```
- conda  django, sqlparse 
+ conda  django, sqlparse, Pillow
 
  pip  django-widget-tweaks
+
+ Might use Chart.js <- I will handle this
+
 ```
 
 # TO DO LIST
@@ -39,6 +42,11 @@
 
 # Commit Messages
 ```
+Ying (6/23/19 4:32 PM)
+  - include pillow for image handling.
+  - profile url set up and link
+  - started profile html
+
 Ying (6/16/19 12:05 AM)
   - fixed html and css for registration page to fit different screen sizes
 

@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'landing.apps.LandingConfig',
     'users.apps.UsersConfig',
     'widget_tweaks',
-  
     'products.apps.ProductsConfig',
     'success_login.apps.SuccessLoginConfig',
     'stats.apps.StatsConfig',
@@ -130,3 +129,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "staticfiles")]
 LOGIN_REDIRECT_URL = 'success_login'
 LOGIN_URL = 'login'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
