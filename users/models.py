@@ -1,21 +1,19 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
-class user (models.Model):
-    user_id = models.AutoField(primary_key=true)
-    first_name = models.CharField(max_length=30)
-    last_name  = models.CharField(max_lenght=30)
-    email = models.CharField(max_length = 254)
-    
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.user.first_name} {self.user.last_name}'
 
 class account_activity (models.Model):
-    activity_id = models.AutoField(primary_key=true)
-    user_id= models.ForeignKey(user.user_id,on_delete=models.CASCADE)
-    activity_type = models.TextField
-    action_timestamp = models.DateTimeField
+    activity_id = models.AutoField(primary_key=True)
+    user_id= models.ForeignKey(User, on_delete=models.CASCADE)
+    activity_type = models.TextField(null=True, blank=True, default=None)
+    action_timestamp = models.DateTimeField(null=True, blank=True, default=None)
 
 class user_login_information (models.Model):
-    login_id = models.AutoField(primary_key=true)
-    login_timestamp = models.DateTimeField
-    log_out_timestamp = models.DateTimeField
-    ser_id= models.ForeignKey(user.user_id,on_delete=models.CASCADE)
+    user_id= models.ForeignKey(User, on_delete=models.CASCADE)
+    login_timestamp = models.DateTimeField(null=True, blank=True, default=None)
+    log_out_timestamp = models.DateTimeField(null=True, blank=True, default=None)

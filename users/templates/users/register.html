@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% load static %}
+    {% load widget_tweaks %}
+    <meta charset="utf-8">
+    <title>Welcome!</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+    <link href="{% static 'users/register/css/register.css' %}" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class ="animated slideInDown">
+        <div class="register">
+          <form class="border border-light p-5" method = "POST">
+              {% csrf_token %}
+              <p class="h4 mb-4 text-center">Sign up</p>
+              {% for field in form.visible_fields %}
+                  <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field|add_class:'form-control' }}
+                    {% for error in field.errors %}
+                      <span class="help-block">{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                {% endfor %}
+              <button class="btn btn-info my-6 mb-4 btn-block" type="submit">Sign up</button>
+              <div class="text-center">
+                <p>Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+              </div>
+          </form>
+        </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Username Requirments</h4>
+          <p class="card-text">
+            <li> Minimum length is 8 characters, maximum is 32. </li>
+            <li> Can only contain letters and numbers  </li>
+          </p>
+          <br>
+          <h4 class="card-title">Password Requirments</h4>
+          <p class="card-text">
+            <li> Minimum length is 8 characters, maximum is 128. </li>
+            <li> Must contain at least one number.  </li>
+            <li> Must contain at least one Capital Letter </li>
+            <li> Must contain at least one special character (e.g. !, @, #, $ etc.) </li>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
