@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
-    <link href="{% static 'success_login/success_login.css' %}" rel="stylesheet">
+    <link href="{% static 'users/profile/css/profile.css' %}" rel="stylesheet">
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
     <meta charset="utf-8">
-    <title>WELCOME !</title>
+    <title> Profile !</title>
   </head>
   <body>
+    <div>
     <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
       <a class="navbar-brand" href="#">CHICKEN NUGGETS</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
@@ -38,7 +39,28 @@
         </ul>
       </div>
     </nav>
-
-    <
+  </div>
+  <div enctype="multipart/form-data">
+      <div class="register">
+        <form class="border border-light p-5" method = "POST">
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }} "> {{ message }}</div>
+            {% endfor %}
+          {% endif %}
+            {% csrf_token %}
+            {% for field in update.visible_fields %}
+                <div class="form-group">
+                  <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                  {{ field|add_class:'form-control' }}
+                  {% for error in field.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              {% endfor %}
+            <button class="btn btn-info my-6 mb-4 btn-block" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
