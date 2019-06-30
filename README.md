@@ -10,7 +10,6 @@
 
 # TO DO LIST
 ```
-
 - Success Log in Page
 - Database Page
 - Password reset
@@ -19,14 +18,13 @@
 - Activity Logger
 - Sign in Logger
 - in actives accounts gets automatically signed out after a certain time.
-- finnish transaction model
+- finish transaction model
 ```
 
 
 
 # What is David Currently Working on???
 ```
-
 - Database Page
 - transaction model
 ```
@@ -38,4 +36,5 @@
 - special character removal from text fields and raising errors
 - Success login Page
 - Put CSS in to profile page
+- implement password reset
 ```
